@@ -21,12 +21,12 @@ public function index(Request $request)
 }
 
     /**
-    * Display a listing of the resource.
-    */
+     * Display a listing of the resource.
+     */
     public function all(Request $request)
     {
-        // Show all posts
-        return Post::all();
+        // Show all posts with the user who created the post
+        return Post::with('user')->get();
     }
 
 

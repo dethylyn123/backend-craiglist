@@ -34,4 +34,12 @@ class Post extends Model
         'image',
         'user_id',
     ];
+
+    /**
+     * Get the user that owns the post.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
